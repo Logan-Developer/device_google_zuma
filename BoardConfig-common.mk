@@ -388,6 +388,12 @@ BOARD_VENDOR_KERNEL_BOOTIMAGE_PARTITION_SIZE := 0x04000000
 # Vendor ramdisk image for kernel development
 BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
 
+# Kill lineage kernel build task while preserving kernel
+TARGET_NO_KERNEL_OVERRIDE := true
+
+# Workaround to make lineage's soong generator work
+TARGET_KERNEL_SOURCE := $(TARGET_KERNEL_DIR)/kernel-headers
+
 KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)
 KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
 

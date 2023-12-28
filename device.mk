@@ -81,6 +81,7 @@ PRODUCT_SOONG_NAMESPACES += \
 	vendor/google_nos/test/system-test-harness \
 	vendor/google/camera
 
+TARGET_KERNEL_VERSION := 5.15
 LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image.lz4
 
 # Set the environment variable to switch the Keymint HAL service to Rust
